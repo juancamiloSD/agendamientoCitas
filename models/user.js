@@ -14,9 +14,6 @@ const UserSchema = Schema({
         type: String,
         require: true,
     },
-    img: {
-        type: String,
-    },
     role: {
         type: String,
         require: true,
@@ -26,7 +23,7 @@ const UserSchema = Schema({
         type: Boolean,
         default: false
     }
-});
+}, {collection: 'usuarios'});
 
 UserSchema.method('toJSON', function(){
     const { __v, _id, password, ...object } = this.toObject();

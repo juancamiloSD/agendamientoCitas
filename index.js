@@ -19,7 +19,10 @@ dbConnection();
 
 
 // Rutas
-app.use('/api/users', require('./routes/users'));
+app.use('/api/usuarios', require('./routes/users'));
+app.use('/api/hospitales', require('./routes/hospitals'));
+app.use('/api/especialidades', require('./routes/specialties'));
+app.use('/api/medicos', require('./routes/doctors'));
 app.use('/api/login', require('./routes/auth'));
 
 
